@@ -2,6 +2,7 @@ plugins {
     id "java"
     id "org.springframework.boot" version "$springBootVersion"
     id "io.spring.dependency-management" version "$dependencyManagementVersion"
+    id "groovy"
 }
 
 group = "az.ingress"
@@ -29,6 +30,9 @@ dependencies {
     implementation "org.springdoc:springdoc-openapi-ui:$openApiVersion"
 
     //testing
+    testImplementation "org.apache.groovy:groovy:$groovyVersion"
+    testImplementation "io.github.benas:random-beans:$randomBeansVersion"
+    testImplementation "org.spockframework:spock-spring:$spockSpringVersion"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
 
